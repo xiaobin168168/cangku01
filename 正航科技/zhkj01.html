@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>正航科技</title>
+		<style>
+		*{
+			/*清除掉浏览器设置的空隙*/
+			/*外边距*/
+			margin: 0;
+			/*内边距*/
+			padding: 0;
+		}
+		/*去掉所有img标签再低版本IE下的边框*/
+		img{
+			border: none;
+		}
+		a{
+			/*去掉下划线*/
+			text-decoration: none;
+		}
+		li{
+			/*去掉li标签的默认样式小圆点*/
+			list-style: none;
+		}
+		
+		
+			.header{
+				/*设置宽度*/
+				width: 1003px;
+				/*设置高度*/
+				height: 78px;
+				/*设置背景，为一张图片*/
+				background: url(images/head_bg.jpg);
+				/*设置盒子自身到剧中*/
+				/*auto表示自动分配两边的宽度*/
+				margin: 0 auto;
+				/*text-align: center;*/
+			}
+			.header .a{
+				/*给叫做a的ul标签设置一个浮动属性，能让块元素站一排*/
+				float: right;
+			}
+			.header .a li{
+				/*给每个Li标签设置浮动，让每个li标签站成一排显示*/
+				float: left;
+				
+				/*去掉li标签的默认样式小圆点*/
+				list-style: none;
+				
+				/*设置高度*/
+				width: 90px; height: 78px;
+				
+				/*加背景图片*/
+				background: url(images/menu_bg.jpg);
+				
+				/*字体左右居中显示*/
+				text-align: center;
+				
+				/*字体上下居中*/
+				line-height: 78px;
+				/*设置文本字体*/
+				font-size: 14px;
+			}
+			/*选择器空格代表的是它下面的子集，下面表示选择叫做到header的下面子集叫a的下面子集叫li标签的下面a标签*/
+			.header .a li a{
+				/*设置字体颜色*/
+				color: blue;
+				/*去掉下划线*/
+				text-decoration: none;
+			}
+			/*hover鼠标放上去变红,*/
+			.header .a li a:hover{
+				color: red;
+				/*hover鼠标放上去有下划线*/
+				text-decoration: underline;
+			}
+		
+		/*第二部分样式开始*/
+		.main{
+			width: 1003px;
+			height: 464px;
+			
+			/*盒子左右自动居中*/
+			margin:0 auto;
+		}
+		.main-l{
+			width: 678px;
+			height: 464px;
+			float: left;
+			
+		}
+		.main-r{
+			width: 325px;
+			height: 464px;
+			float: left;
+		}
+		.main-l img{
+			float: left;
+		}
+		.main-l-down{
+			width: 600px;
+			height: 390px;
+			float: left;
+			padding: 0 39px;
+		}
+		.main-l-down p{
+			/*设置字体大小*/
+			font-size: 14px;
+			/*设置首行缩进*/
+			text-indent: 28px;
+			/*设置行高*/
+			line-height: 24px;
+			/*设置p段落下边距*/
+			margin-bottom: 20px;
+			/*设置字符间距*/
+			letter-spacing: 1px;
+		}
+		
+		    /*第三个盒子样式开始*/
+		.footer{
+			width: 1003px;
+			height: 63px;
+			background: ;
+			/*盒子居中*/
+			margin: 0 auto;
+			
+			/*盒子里面的内容居中*/
+			text-align: center;
+			
+			font-size: 12px;
+			line-height: 24px;
+			padding-top: 15px;
+			/*上边逛*/
+			border-top: 1px solid darkcyan;
+		}
+		</style>
+	</head>
+	<body>
+		<!--先分析第一页的结构，分为上中下，可以设置上中下三个大盒子-->
+		<!--首先做一个盒子，设置一个div，取名叫header-->
+		<!--第一个盒子开始-->
+		<div class="header">
+			<!--盒子里面放第一个子集叫做a链接的标签，里面放一个img图片-->
+			<a href="zhkj01.html">
+				<img src="images/logo.jpg">
+			</a>
+			<!--盒子里放第二个子集叫ul标签，注意ul和li标签必须配合使用，两者缺一不可，ul标签子集必须是li-->
+			<ul class="a">
+				<!--有空格的地方，切换到中文输入法，并且点全角，然后再按空格键。-->
+				<li><a href="zhkj01.html">首　　页</a></li>
+				<li><a href="zhkj02.html">企业新闻</a></li>
+				<li><a href="zhkj03.html">行业动态</a></li>
+				<li><a href="zhkj04.html">企业理念</a></li>
+				<li><a href="zhkj05.html">网站留言</a></li>
+			</ul>
+		</div>
+		<!--第一个盒子结束-->
+		
+		<!--第二个盒子开始-->
+		<div class="main">
+			<div class="main-l">
+				<img src="images/about_us.jpg" />
+				<div class="main-l-down">
+					<p>正航科技在客户服务实践中完成了技术、产品、管理、市场、人才储备等有形、无形资产的积累，并迅速形成了一套从市场分析、产品设计、开发到推广的完整高效的运作体系。亿新网络公司/亿新科技从2002年开始提供网站建设、网站策划、网站开发、网站设计、SEO网站优化、网络推广、电子商务技术、多媒体光盘等服务，积累了大量的经验，同时也培养了一支成熟的技术开发团队。</p>
+                    <p>为了让每个客户的项目都能精益求精，因此每一个设计项目都有专属的项目负责人以及搭配的网页设计师，动画师和程式设计师来执行项目，不仅能完全掌控项目的进度，面对客户的需求和问题，更能以最快的速度提出完整的解决方案，确保能为客户开发出高质量和满足客户需求的产品。</p>
+                    <p>历经五年，正航科技在众多客户的支持和肯定下一起成长，每一个客户对亿新科技来说都是崭新的开始，每一个项目都是全新的挑战。成长过程中亿新科技积累了丰富的客户资源和服务经验，其中包括德力西集团、春风控股集团、共信电气科技、上海中科电气集团、华通集团等，在众多客户的高度评价之下，亿新科技继续提供最优质的服务，往前迈进。</p>
+				</div>
+			</div>
+			<div class="main-r">
+				<img src="images/main_banner.jpg" />
+			</div>
+		</div>
+		<!--第二个盒子结束-->
+		
+		<!--第三个盒子开始-->
+		<div class="footer">
+			<p>2011-2013 ©  正航科技股份有限公司 版权所有</p>
+			<p>地址：上海乐清市柳市镇柳市大厦  邮编：200000 电话：021-12345678 传真：021-12345678 E-mail：admin@zhenghang.com</p>
+		</div>
+	</body>
+</html>

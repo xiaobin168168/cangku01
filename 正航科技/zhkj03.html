@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+			/*清除掉浏览器设置的空隙*/
+			/*外边距*/
+			margin: 0;
+			/*内边距*/
+			padding: 0;
+		}
+		/*去掉所有img标签再低版本IE下的边框*/
+		img{
+			border: none;
+		}
+		a{
+			/*去掉下划线*/
+			text-decoration: none;
+		}
+		li{
+			/*去掉li标签的默认样式小圆点*/
+			list-style: none;
+		}
+		
+			.header{
+				/*设置宽度*/
+				width: 1003px;
+				/*设置高度*/
+				height: 78px;
+				/*设置背景，为一张图片*/
+				background: url(images/head_bg.jpg);
+				/*设置盒子自身到剧中*/
+				/*auto表示自动分配两边的宽度*/
+				margin: 0 auto;
+				/*text-align: center;*/
+			}
+			.header .a{
+				/*给叫做a的ul标签设置一个浮动属性，能让块元素站一排*/
+				float: right;
+			}
+			.header .a li{
+				/*给每个Li标签设置浮动，让每个li标签站成一排显示*/
+				float: left;
+				
+				/*去掉li标签的默认样式小圆点*/
+				list-style: none;
+				
+				/*设置高度*/
+				width: 90px; height: 78px;
+				
+				/*加背景图片*/
+				background: url(images/menu_bg.jpg);
+				
+				/*字体左右居中显示*/
+				text-align: center;
+				
+				/*字体上下居中*/
+				line-height: 78px;
+				/*设置文本字体*/
+				font-size: 14px;
+			}
+			/*选择器空格代表的是它下面的子集，下面表示选择叫做到header的下面子集叫a的下面子集叫li标签的下面a标签*/
+			.header .a li a{
+				/*设置字体颜色*/
+				color: blue;
+				/*去掉下划线*/
+				text-decoration: none;
+			}
+			 /*hover鼠标放上去变红,*/
+			.header .a li a:hover{
+				color: red;
+				/*hover鼠标放上去有下划线*/
+				text-decoration: underline;
+			}
+			 /*banner样式开始*/
+			.banner{
+				width: 1003px;
+				height: 132px;
+				margin: 0 auto;
+			}
+				 
+				 /*内容main样式*/ 
+			.main{
+				width: 1003px;
+				height: 411px;
+				/*background: cyan;*/
+				margin: 0 auto;
+				border-top: 1px #666 solid;
+			} 
+		    .main-l{
+		    	width: 261px;
+		    	height: 411px;
+		    	/*background: green;*/
+		    	float: left;
+		    	border-right: 1px #666 solid;
+		    }  
+		    .main-l ul li{
+		    	width: 261px;
+		    	height: 54px;
+		    	line-height: 54px;
+		    	text-align: center;
+		    	background: url(images/sec_menu_bg_b.jpg);
+		    	font-size: 14px;
+		    }
+		    .main-l ul li a{
+		    	/* a标签默认有设置一个自己的颜色，所以要到a便签里面设置想要的颜色*/
+		    	color: skyblue;
+		    	
+		    }
+		    .main-l ul .active{
+		    	/*背景颜色*/
+		    	background: url(images/sec_menu_bg_a.jpg);
+		    }
+		    .main-l ul .active a{
+		    	color: white;
+		    }
+		    .main-l ul li:hover{
+		    	background:url(images/sec_menu_bg_a.jpg);
+		    }
+		       /*鼠标移入可以让下面的子集改变*/
+		    .main-l ul li:hover a{
+		        color: white;
+		    }
+			.main-r{
+				width: 741px;
+				height: 411px;
+				/*background: red;*/
+				float: left;
+			}
+			.main-r img{
+				float: left;
+			}
+			.main-r-down{
+				width: 621px;
+				height: 344px;
+				/*background: red;*/
+				float: left;
+				padding: 0 60px;
+			}
+			.main-r-down ul li{
+				width: 621px;
+				height: 30px;
+				line-height: 30px;
+				font-size: 14px;
+			}
+			.main-r-down ul li a{
+				float: left;
+				color: #000;
+			}
+			
+			.main-r-down ul li:hover a{
+				color: red;
+				/*下划线*/
+				text-decoration: underline;
+			}
+				  
+				/*第三个盒子样式开始*/
+		    .footer{
+			   width: 1003px;
+			   height: 63px;
+			   background: ;
+			   /*盒子居中*/
+			   margin: 0 auto;
+			
+			  /*盒子里面的内容居中*/
+			   text-align: center;
+			
+			   font-size: 12px;
+			   line-height: 24px;
+			   padding-top: 15px;
+			   border-top: 1px solid darkcyan;
+		}
+		</style>
+	</head>
+	<body>
+		<!--先分析第一页的结构，分为上中下，可以设置上中下三个大盒子-->
+		<!--首先做一个盒子，设置一个div，取名叫header-->
+		<!--第一个盒子开始-->
+		<div class="header">
+			<!--盒子里面放第一个子集叫做a链接的标签，里面放一个img图片-->
+			<a href="zhkj01.html">
+				<img src="images/logo.jpg">
+			</a>
+			<!--盒子里放第二个子集叫ul标签，注意ul和li标签必须配合使用，两者缺一不可，ul标签子集必须是li-->
+			<ul class="a">
+				<!--有空格的地方，切换到中文输入法，并且点全角，然后再按空格键。-->
+				<li><a href="zhkj01.html">首　　页</a></li>
+				<li><a href="zhkj02.html">企业新闻</a></li>
+				<li><a href="zhkj03.html">行业动态</a></li>
+				<li><a href="zhkj04.html">企业理念</a></li>
+				<li><a href="zhkj05.html">网站留言</a></li>
+			</ul>
+		</div>
+		<!--第一个盒子结束-->
+		
+		<!--banner广告横幅-->
+		<div class="banner">
+			<img src="images/sec_banner.jpg" />        </div>
+		
+		<!--第二个大盒子的开始-->
+		<div class="main">
+			<div class="main-l">
+				<ul>
+				 <!--有空格的地方，切换到中文输入法，并且点全角，然后再按空格键。-->
+				  <li><a href="zhkj02.html">企业新闻</a></li>
+				  <li class="active"><a href="zhkj03.html">行业动态</a></li>
+				  <li><a href="zhkj04.html">企业理念</a></li>
+				  <li><a href="zhkj05.html">网站留言</a></li>
+			    </ul>
+			</div>
+			<div class="main-r">
+				<img src="images/world_news.jpg" />
+				<div class="main-r-down">
+					<ul>
+						<li><a href="#">日本老人抗议政府没收财产 用燃烧弹烧政府大楼</a></li>
+                        <li><a href="#">美国媒体:斯诺登或有美监控中国领导人资料</a></li>
+                        <li><a href="#">奥巴马政府曾命政府人员相互监视遭曝光</a></li>
+                        <li><a href="#">印越外长重申联手开发南海 印可进入越专属区</a></li>
+                        <li><a href="#">韩国陆军最前方哨所一名哨兵因手榴弹爆炸身亡</a></li>
+                        <li><a href="#">美政府与社交网用户活泼互动讨论中美对话</a></li>
+                        <li><a href="#">外媒称确认在沙特发现中国产东风-3导弹基地</a></li>
+                        <li><a href="#">俄赴古巴航班偏离航线飞行被疑与斯诺登有关</a></li>
+                        <li><a href="#">三一起诉奥巴马案再开庭 司法审查成焦点</a></li>
+                        <li><a href="#">澳大利亚国中国85岁王妃去世 该国共20人</a></li>
+                        <li><a href="#">俄克里姆林宫为防泄密拟购买老式打字机(图)</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		<!--第三个盒子的开始-->
+			<div class="footer">
+			<p>2011-2013 ©  正航科技股份有限公司 版权所有</p>
+			<p>地址：上海乐清市柳市镇柳市大厦  邮编：200000 电话：021-12345678 传真：021-12345678 E-mail：admin@zhenghang.com</p>
+		</div>
+		<!--第三个盒子结束-->
+	</body>
+</html>
